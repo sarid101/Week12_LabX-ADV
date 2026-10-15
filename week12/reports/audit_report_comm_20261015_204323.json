@@ -1,0 +1,145 @@
+[
+    {
+        "timestamp": "2026-10-15T20:42:54",
+        "status": "INFO",
+        "task_type": "agent_run",
+        "message": "Communication Agent started (LIVE mode).",
+        "details": {}
+    },
+    {
+        "timestamp": "2026-10-15T20:42:54",
+        "status": "INFO",
+        "task_type": "send_email",
+        "message": "Starting task 'Send Daily Sales Report Email'",
+        "details": {}
+    },
+    {
+        "timestamp": "2026-10-15T20:42:59",
+        "status": "SUCCESS",
+        "task_type": "send_email",
+        "message": "Task 'Send Daily Sales Report Email' completed successfully.",
+        "details": {
+            "recipients": {
+                "to": [
+                    "sa*****@kkumail.com"
+                ],
+                "cc": [
+                    "tl*********@gmail.com"
+                ]
+            },
+            "subject": "Daily Sales Report - 2026-10-15",
+            "attachments": [
+                "sales_report.pdf",
+                "summary_data.xlsx"
+            ]
+        }
+    },
+    {
+        "timestamp": "2026-10-15T20:42:59",
+        "status": "INFO",
+        "task_type": "send_sms",
+        "message": "Starting task 'Send Sales Alert SMS'",
+        "details": {}
+    },
+    {
+        "timestamp": "2026-10-15T20:43:05",
+        "status": "SUCCESS",
+        "task_type": "send_sms",
+        "message": "Task 'Send Sales Alert SMS' completed successfully.",
+        "details": {
+            "phone_numbers": [
+                "tl*********@gmail.com"
+            ],
+            "message": "Sales for 2026-10-15 are $12,345.67. Total customers: 500. Review!"
+        }
+    },
+    {
+        "timestamp": "2026-10-15T20:43:05",
+        "status": "INFO",
+        "task_type": "send_email",
+        "message": "Starting task 'Simulate Incoming Request Email (to self)'",
+        "details": {}
+    },
+    {
+        "timestamp": "2026-10-15T20:43:10",
+        "status": "SUCCESS",
+        "task_type": "send_email",
+        "message": "Task 'Simulate Incoming Request Email (to self)' completed successfully.",
+        "details": {
+            "recipients": {
+                "to": [
+                    "tl*********@gmail.com"
+                ]
+            },
+            "subject": "Data Request for 2026-10-15 - Urgent",
+            "attachments": [
+                "sales_report.pdf"
+            ]
+        }
+    },
+    {
+        "timestamp": "2026-10-15T20:43:10",
+        "status": "INFO",
+        "task_type": "process_inbox",
+        "message": "Starting task 'Process Incoming Data Requests'",
+        "details": {}
+    },
+    {
+        "timestamp": "2026-10-15T20:43:14",
+        "status": "INFO",
+        "task_type": "process_inbox",
+        "message": "Processing email 'Data Request for 2026-10-15 - Urgent' from tl*********@gmail.com (1 attachment(s) downloaded)",
+        "details": {}
+    },
+    {
+        "timestamp": "2026-10-15T20:43:19",
+        "status": "SUCCESS",
+        "task_type": "rule_action",
+        "message": "SMS alert for 'Data Request for 2026-10-15 - Urgent': URGENT: New Data Request email received from tl*********@gmail.com - Subject: Data Request for 2026-10-15 - Urgent. Saved: sales_report.pdf",
+        "details": {}
+    },
+    {
+        "timestamp": "2026-10-15T20:43:23",
+        "status": "SUCCESS",
+        "task_type": "rule_action",
+        "message": "Auto-reply sent: 'Re: Data Request for 2026-10-15 - Urgent - Received & Processing'",
+        "details": {}
+    },
+    {
+        "timestamp": "2026-10-15T20:43:23",
+        "status": "SUCCESS",
+        "task_type": "process_inbox",
+        "message": "Task 'Process Incoming Data Requests' completed successfully.",
+        "details": {
+            "processed_emails": [
+                {
+                    "uid": "9217",
+                    "sender": "tl*********@gmail.com",
+                    "subject": "Data Request for 2026-10-15 - Urgent",
+                    "attachments": [
+                        "sales_report.pdf"
+                    ],
+                    "actions": [
+                        "send_sms_alert:OK",
+                        "auto_reply:OK"
+                    ]
+                }
+            ],
+            "count": 1
+        }
+    },
+    {
+        "timestamp": "2026-10-15T20:43:23",
+        "status": "INFO",
+        "task_type": "agent_run_summary",
+        "message": "Communication Agent finished in 28.93 seconds.",
+        "details": {}
+    },
+    {
+        "timestamp": "2026-10-15T20:43:23",
+        "status": "INFO",
+        "task_type": "audit_report",
+        "message": "Audit report generated at reports/audit_report_comm_20261015_204323.json",
+        "details": {}
+    }
+]
